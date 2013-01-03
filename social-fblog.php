@@ -116,7 +116,7 @@ class Social_FBlog {
             ),
             'linkedin_active' => array(
                 'title' => __( 'Display LinkedIn button', 'socialfblog' ),
-                'default' => 0,
+                'default' => null,
                 'type' => 'checkbox',
                 'section' => 'linkedin',
                 'menu' => 'socialfblog_buttons'
@@ -128,7 +128,7 @@ class Social_FBlog {
             ),
             'pinterest_active' => array(
                 'title' => __( 'Display Pinterest button', 'socialfblog' ),
-                'default' => 0,
+                'default' => null,
                 'type' => 'checkbox',
                 'section' => 'pinterest',
                 'menu' => 'socialfblog_buttons'
@@ -140,7 +140,7 @@ class Social_FBlog {
             ),
             'email_active' => array(
                 'title' => __( 'Display Email button', 'socialfblog' ),
-                'default' => 0,
+                'default' => null,
                 'type' => 'checkbox',
                 'section' => 'email',
                 'menu' => 'socialfblog_buttons'
@@ -180,7 +180,7 @@ class Social_FBlog {
             ),
             'border_radius' => array(
                 'title' => __( 'Add Rounded Edges', 'socialfblog' ),
-                'default' => 0,
+                'default' => null,
                 'type' => 'checkbox',
                 'description' => __( 'Does not work in old browsers.', 'socialfblog' ),
                 'section' => 'settings',
@@ -256,9 +256,9 @@ class Social_FBlog {
                 'google_active'    => ( 'true' == get_option( 'social_fblog_gplusone_on' ) ) ? 1 : 0,
                 'facebook_active'  => ( 'true' == get_option( 'social_fblog_face_on' ) ) ? 1 : 0,
                 'facebook_send'    => ( 'true' == get_option( 'social_fblog_face_share' ) ) ? 1 : 0,
-                'linkedin_active'  => 0,
-                'pinterest_active' => 0,
-                'email_active'     => 0
+                // 'linkedin_active'  => 0,
+                // 'pinterest_active' => 0,
+                // 'email_active'     => 0
             );
 
             switch ( get_option( 'social_fblog_local' ) ) {
@@ -291,7 +291,7 @@ class Social_FBlog {
                 'display_in'        => $display_in,
                 'horizontal_align'  => get_option( 'social_fblog_margin' ),
                 'top_distance'      => get_option( 'social_fblog_top' ),
-                'border_radius'     => ( 'true' == get_option( 'social_fblog_border' ) ) ? 1 : 0,
+                'border_radius'     => ( 'true' == get_option( 'social_fblog_border' ) ) ? 1 : null,
                 'effects'           => ( 'true' == get_option( 'social_fblog_effect' ) ) ? 0 : 1,
                 'opacity'           => $opacity,
                 'opacity_intensity' => get_option( 'social_fblog_opacity_valor' )

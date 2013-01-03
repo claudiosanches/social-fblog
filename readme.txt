@@ -12,7 +12,7 @@ Inserts a floating box next to your blog posts to share your content on Twitter,
 
 == Description ==
 
-Inserts a floating box nEnter a floating box with buttons to share your posts on social networks easily.
+Inserts a floating box a floating box with buttons to share your posts on social networks easily.
 With a clean and lightweight plugin.
 
 ### Descrição em Português: ###
