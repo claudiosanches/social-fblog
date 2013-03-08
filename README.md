@@ -1,5 +1,5 @@
 # Social FBlog #
-**Contributors:** claudiosanches, Marcos Lemos  
+**Contributors:** claudiosanches  
 **Donate link:** http://claudiosmweb.com/doacoes/  
 **Tags:** share, jquery, facebook, twitter, google plus, linkedin, pinterest, email  
 **Requires at least:** 3.3  
