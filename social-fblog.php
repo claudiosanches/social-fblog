@@ -232,11 +232,10 @@ class Social_FBlog {
 
         foreach ( $this->default_settings() as $key => $value ) {
             if ( 'section' != $value['type'] ) {
-                if ( 'socialfblog_buttons' == $value['menu'] ) {
+                if ( 'socialfblog_buttons' == $value['menu'] )
                     $buttons[ $key ] = $value['default'];
-                } else {
+                else
                     $settings[ $key ] = $value['default'];
-                }
             }
         }
 
@@ -344,12 +343,10 @@ class Social_FBlog {
     public function settings_page() {
         // Create tabs current class.
         $current_tab = '';
-        if ( isset($_GET['tab'] ) ) {
+        if ( isset($_GET['tab'] ) )
             $current_tab = $_GET['tab'];
-        } else {
+        else
             $current_tab = 'buttons';
-        }
-
         ?>
 
         <div class="wrap">
@@ -384,9 +381,8 @@ class Social_FBlog {
         $settings = 'socialfblog_settings';
 
         // Create option in wp_options.
-        if ( false == get_option( $settings ) ) {
+        if ( false == get_option( $settings ) )
             $this->update();
-        }
 
         foreach ( $this->default_settings() as $key => $value ) {
 
@@ -463,24 +459,22 @@ class Social_FBlog {
      * @return string      Text field.
      */
     public function text_element_callback( $args ) {
-        $menu = $args['menu'];
-        $id = $args['id'];
+        $menu  = $args['menu'];
+        $id    = $args['id'];
         $class = isset( $args['class'] ) ? $args['class'] : 'small-text';
 
         $options = get_option( $menu );
 
-        if ( isset( $options[$id] ) ) {
-            $current = $options[$id];
-        } else {
+        if ( isset( $options[ $id ] ) )
+            $current = $options[ $id ];
+        else
             $current = isset( $args['default'] ) ? $args['default'] : '';
-        }
 
         $html = sprintf( '<input type="text" id="%1$s" name="%2$s[%1$s]" value="%3$s" class="%4$s" />', $id, $menu, $current, $class );
 
         // Displays option description.
-        if ( isset( $args['description'] ) ) {
+        if ( isset( $args['description'] ) )
             $html .= sprintf( '<p class="description">%s</p>', $args['description'] );
-        }
 
         echo $html;
     }
@@ -494,24 +488,22 @@ class Social_FBlog {
      */
     public function checkbox_element_callback( $args ) {
         $menu = $args['menu'];
-        $id = $args['id'];
+        $id   = $args['id'];
 
         $options = get_option( $menu );
 
-        if ( isset( $options[$id] ) ) {
-            $current = $options[$id];
-        } else {
+        if ( isset( $options[ $id ] ) )
+            $current = $options[ $id ];
+        else
             $current = isset( $args['default'] ) ? $args['default'] : '';
-        }
 
         $html = sprintf( '<input type="checkbox" id="%1$s" name="%2$s[%1$s]" value="1"%3$s />', $id, $menu, checked( 1, $current, false ) );
 
         $html .= sprintf( '<label for="%s"> %s</label><br />', $id, __( 'Activate/Deactivate', 'social-fblog' ) );
 
         // Displays option description.
-        if ( isset( $args['description'] ) ) {
+        if ( isset( $args['description'] ) )
             $html .= sprintf( '<p class="description">%s</p>', $args['description'] );
-        }
 
         echo $html;
     }
@@ -525,15 +517,14 @@ class Social_FBlog {
      */
     function select_element_callback( $args ) {
         $menu = $args['menu'];
-        $id = $args['id'];
+        $id   = $args['id'];
 
         $options = get_option( $menu );
 
-        if ( isset( $options[$id] ) ) {
-            $current = $options[$id];
-        } else {
+        if ( isset( $options[ $id ] ) )
+            $current = $options[ $id ];
+        else
             $current = isset( $args['default'] ) ? $args['default'] : '#ffffff';
-        }
 
         $html = sprintf( '<select id="%1$s" name="%2$s[%1$s]">', $id, $menu );
         $key = 0;
@@ -545,9 +536,8 @@ class Social_FBlog {
         $html .= '</select>';
 
         // Displays option description.
-        if ( isset( $args['description'] ) ) {
+        if ( isset( $args['description'] ) )
             $html .= sprintf( '<p class="description">%s</p>', $args['description'] );
-        }
 
         echo $html;
     }
@@ -560,22 +550,14 @@ class Social_FBlog {
      * @return array        validated options.
      */
     public function validate_options( $input ) {
-        // Create our array for storing the validated options.
         $output = array();
 
-        // Loop through each of the incoming options.
         foreach ( $input as $key => $value ) {
-
-            // Check to see if the current option has a value. If so, process it.
-            if ( isset( $input[$key] ) ) {
-
-                // Strip all HTML and PHP tags and properly handle quoted strings.
-                $output[$key] = strip_tags( stripslashes( $input[$key] ) );
-            }
+            if ( isset( $input[ $key ] ) )
+                $output[ $key ] = sanitize_text_field( $input[ $key ] );
         }
 
-        // Return the array processing any additional functions filtered by this action.
-        return apply_filters( 'socialfblog_validate_input', $output, $input );
+        return $output;
     }
 
     /**
@@ -678,9 +660,8 @@ class Social_FBlog {
      * Register front-end scripts.
      */
     public function front_end_scripts() {
-        if ( is_single() || is_page() ) {
+        if ( is_single() || is_page() )
             wp_enqueue_script( 'jquery' );
-        }
     }
 
     /**
@@ -860,8 +841,6 @@ class Social_FBlog {
                 $html .= $style;
 
             $html .= '</style>' . "\n";
-
-
 
             switch ( $settings['display_in'] ) {
                 case '1':
