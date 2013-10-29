@@ -5,7 +5,7 @@
  * Description: Inserts a floating box next to your blog posts to share your content on Twitter, Facebook and Google Plus and others.
  * Author: claudiosanches
  * Author URI: http://claudiosmweb.com/
- * Version: 3.0
+ * Version: 3.1.0
  * License: GPLv2 or later
  * Text Domain: social-fblog
  * Domain Path: /languages/
@@ -32,9 +32,6 @@ class Social_FBlog {
 
         // Adds footer js.
         add_filter( 'wp_footer', array( &$this, 'footer_js' ), 999 );
-
-        // Front-end styles.
-        add_filter( 'wp_head', array( &$this, 'front_end_styles' ) );
 
         // Display buttons.
         add_filter( 'the_content', array( &$this, 'display_buttons' ), 999 );
@@ -660,8 +657,12 @@ class Social_FBlog {
      * Register front-end scripts.
      */
     public function front_end_scripts() {
-        if ( is_single() || is_page() )
+        if ( is_single() || is_page() ) {
+            $settings = get_option( 'socialfblog_settings' );
+
             wp_enqueue_script( 'jquery' );
+            wp_enqueue_style( 'social-fblog', plugins_url( 'assets/css/social-fblog.css', __FILE__ ), array(), null );
+        }
     }
 
     /**
@@ -777,87 +778,6 @@ class Social_FBlog {
     }
 
     /**
-     * Display styles in front-end.
-     */
-    public function front_end_styles() {
-
-        if ( is_single() || is_page() ) {
-            $settings = get_option( 'socialfblog_settings' );
-
-            // Border radius setting.
-            $border_radius = isset( $settings['border_radius'] ) ? '-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px;' : '';
-
-            // Opacity setting.
-            switch ( $settings['opacity'] ) {
-                case 1:
-                    $opacity = '#socialfblog-box {opacity:' . $settings['opacity_intensity'] . ';}#socialfblog-box:hover {opacity:1 !important;}';
-                    break;
-                case 2:
-                    $opacity = '#socialfblog-box {opacity:' . $settings['opacity_intensity'] . ' !important;}#socialfblog-box:hover {opacity:1 !important;}';
-                    break;
-
-                default:
-                    $opacity = '';
-                    break;
-            }
-
-            $html = '<style type="text/css">';
-
-                $style = '#socialfblog {width:60px;}';
-
-                $style .= '#socialfblog-box {';
-                    $style .= 'background:#fff;';
-                    $style .= 'border:1px solid #ccc;';
-                    $style .= $border_radius;
-                    $style .= 'display:block;';
-                    $style .= 'float:left;';
-                    $style .= 'margin:0 0 0 ' . $settings['horizontal_align'] . 'px;';
-                    $style .= 'padding:12px 5px 5px;';
-                    $style .= 'position:absolute;';
-                    $style .= 'text-align:center;';
-                    $style .= 'top:' . $settings['top_distance'] . 'px;';
-                    $style .= 'z-index:9999;';
-
-                $style .= '}';
-
-                $style .= '#socialfblog-box iframe {margin:0;padding:0;}';
-
-                $style .= '#socialfblog-box div {margin:0 0 5px;}';
-
-                // Fix buttons.
-                $style .= '#socialfblog-twitter iframe {height:63px !important;}';
-                $style .= '#socialfblog-twitter .twitter-count-vertical {width:56px !important;}';
-                $style .= '#socialfblog-facebook > div {margin:1px 0 0 !important;}';
-                $style .= '#socialfblog-facebook .fb_iframe_widget iframe {position:relative !important;}';
-                $style .= '#socialfblog-email a {border:1px solid #ccc;color:#777;display:block;text-decoration:none;}';
-                $style .= '#socialfblog-email a:hover {background:#eee;}';
-
-                $style .= '#fb-root {display:none;}';
-
-                $style .= $opacity;
-
-                apply_filters( 'socialfblog_styles', $style );
-
-                $html .= $style;
-
-            $html .= '</style>' . "\n";
-
-            switch ( $settings['display_in'] ) {
-                case '1':
-                    if ( is_single() ) echo $html;
-                    break;
-                case '2':
-                    if ( is_page() ) echo $html;
-                    break;
-
-                default:
-                    echo $html;
-                    break;
-            }
-        }
-    }
-
-    /**
      * Display buttons in the_content().
      *
      * @param  string $content Post or page content.
@@ -888,9 +808,24 @@ class Social_FBlog {
 
             $display = apply_filters( 'socialfblog_buttons', $display );
 
+            // Styles.
+            $border_radius = isset( $settings['border_radius'] ) ? 'rounded' : '';
+            switch ( $settings['opacity'] ) {
+                case 1:
+                    $opacity = ' opacity:' . $settings['opacity_intensity'] . ';';
+                    break;
+                case 2:
+                    $opacity = ' opacity:' . $settings['opacity_intensity'] . ' !important;';
+                    break;
+
+                default:
+                    $opacity = '';
+                    break;
+            }
+
             // Plugin HTML.
             $html = '<div id="socialfblog">';
-                $html .= '<div id="socialfblog-box">';
+                $html .= sprintf( '<div id="socialfblog-box" class="%s" style="margin-left: %spx; top: %spx;%s">', $border_radius, $settings['horizontal_align'], $settings['top_distance'], $opacity );
                     $html .= $display;
                 $html .= '</div>';
             $html .= '</div>' . "\n";
@@ -913,6 +848,6 @@ class Social_FBlog {
         return $content;
     }
 
-} // close Social_FBlog class.
+}
 
-$social_fblog_class = new Social_FBlog();
+new Social_FBlog();
