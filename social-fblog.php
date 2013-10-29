@@ -7,7 +7,7 @@
  * Author URI: http://claudiosmweb.com/
  * Version: 3.0
  * License: GPLv2 or later
- * Text Domain: socialfblog
+ * Text Domain: social-fblog
  * Domain Path: /languages/
  */
 
@@ -47,7 +47,7 @@ class Social_FBlog {
      * Load translations.
      */
     public function languages() {
-        load_plugin_textdomain( 'socialfblog', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+        load_plugin_textdomain( 'social-fblog', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
     }
 
     /**
@@ -59,162 +59,162 @@ class Social_FBlog {
 
         $settings = array(
             'twitter' => array(
-                'title' => __( 'Twitter', 'socialfblog' ),
+                'title' => __( 'Twitter', 'social-fblog' ),
                 'type' => 'section',
                 'menu' => 'socialfblog_buttons'
             ),
             'twitter_active' => array(
-                'title' => __( 'Display Twitter button', 'socialfblog' ),
+                'title' => __( 'Display Twitter button', 'social-fblog' ),
                 'default' => 1,
                 'type' => 'checkbox',
                 'section' => 'twitter',
                 'menu' => 'socialfblog_buttons'
             ),
             'twitter_user' => array(
-                'title' => __( 'Twitter username', 'socialfblog' ),
+                'title' => __( 'Twitter username', 'social-fblog' ),
                 'default' => 'ferramentasblog',
                 'type' => 'text',
-                'description' => __( 'Just insert the username. Example: ferramentasblog', 'socialfblog' ),
+                'description' => __( 'Just insert the username. Example: ferramentasblog', 'social-fblog' ),
                 'section' => 'twitter',
                 'menu' => 'socialfblog_buttons'
             ),
             'google' => array(
-                'title' => __( 'Google Plus', 'socialfblog' ),
+                'title' => __( 'Google Plus', 'social-fblog' ),
                 'type' => 'section',
                 'menu' => 'socialfblog_buttons'
             ),
             'google_active' => array(
-                'title' => __( 'Display Google Plus button', 'socialfblog' ),
+                'title' => __( 'Display Google Plus button', 'social-fblog' ),
                 'default' => 1,
                 'type' => 'checkbox',
                 'section' => 'google',
                 'menu' => 'socialfblog_buttons'
             ),
             'facebook' => array(
-                'title' => __( 'Facebook', 'socialfblog' ),
+                'title' => __( 'Facebook', 'social-fblog' ),
                 'type' => 'section',
                 'menu' => 'socialfblog_buttons'
             ),
             'facebook_active' => array(
-                'title' => __( 'Display Facebook button', 'socialfblog' ),
+                'title' => __( 'Display Facebook button', 'social-fblog' ),
                 'default' => 1,
                 'type' => 'checkbox',
                 'section' => 'facebook',
                 'menu' => 'socialfblog_buttons'
             ),
             'facebook_send' => array(
-                'title' => __( 'Display Facebook Send button', 'socialfblog' ),
+                'title' => __( 'Display Facebook Send button', 'social-fblog' ),
                 'default' => 1,
                 'type' => 'checkbox',
                 'section' => 'facebook',
                 'menu' => 'socialfblog_buttons'
             ),
             'linkedin' => array(
-                'title' => __( 'LinkedIn', 'socialfblog' ),
+                'title' => __( 'LinkedIn', 'social-fblog' ),
                 'type' => 'section',
                 'menu' => 'socialfblog_buttons'
             ),
             'linkedin_active' => array(
-                'title' => __( 'Display LinkedIn button', 'socialfblog' ),
+                'title' => __( 'Display LinkedIn button', 'social-fblog' ),
                 'default' => null,
                 'type' => 'checkbox',
                 'section' => 'linkedin',
                 'menu' => 'socialfblog_buttons'
             ),
             'pinterest' => array(
-                'title' => __( 'Pinterest', 'socialfblog' ),
+                'title' => __( 'Pinterest', 'social-fblog' ),
                 'type' => 'section',
                 'menu' => 'socialfblog_buttons'
             ),
             'pinterest_active' => array(
-                'title' => __( 'Display Pinterest button', 'socialfblog' ),
+                'title' => __( 'Display Pinterest button', 'social-fblog' ),
                 'default' => null,
                 'type' => 'checkbox',
                 'section' => 'pinterest',
                 'menu' => 'socialfblog_buttons'
             ),
             'email' => array(
-                'title' => __( 'Email', 'socialfblog' ),
+                'title' => __( 'Email', 'social-fblog' ),
                 'type' => 'section',
                 'menu' => 'socialfblog_buttons'
             ),
             'email_active' => array(
-                'title' => __( 'Display Email button', 'socialfblog' ),
+                'title' => __( 'Display Email button', 'social-fblog' ),
                 'default' => null,
                 'type' => 'checkbox',
                 'section' => 'email',
                 'menu' => 'socialfblog_buttons'
             ),
             'settings' => array(
-                'title' => __( 'Settings', 'socialfblog' ),
+                'title' => __( 'Settings', 'social-fblog' ),
                 'type' => 'section',
                 'menu' => 'socialfblog_settings'
             ),
             'display_in' => array(
-                'title' => __( 'Display Buttons in', 'socialfblog' ),
+                'title' => __( 'Display Buttons in', 'social-fblog' ),
                 'default' => 1,
                 'type' => 'select',
                 'options' => array(
-                    __( 'Posts and Pages', 'socialfblog' ),
-                    __( 'Only in Posts', 'socialfblog' ),
-                    __( 'Only in Pages', 'socialfblog' ),
+                    __( 'Posts and Pages', 'social-fblog' ),
+                    __( 'Only in Posts', 'social-fblog' ),
+                    __( 'Only in Pages', 'social-fblog' ),
                 ),
                 'section' => 'settings',
                 'menu' => 'socialfblog_settings'
             ),
             'horizontal_align' => array(
-                'title' => __( 'Horizontal Alignment', 'socialfblog' ),
+                'title' => __( 'Horizontal Alignment', 'social-fblog' ),
                 'default' => -80,
                 'type' => 'text',
-                'description' => __( 'This option is used to control the distance of the sharing buttons on the content. Use only integer numbers.', 'socialfblog' ),
+                'description' => __( 'This option is used to control the distance of the sharing buttons on the content. Use only integer numbers.', 'social-fblog' ),
                 'section' => 'settings',
                 'menu' => 'socialfblog_settings'
             ),
             'top_distance' => array(
-                'title' => __( 'Initial Distance', 'socialfblog' ),
+                'title' => __( 'Initial Distance', 'social-fblog' ),
                 'default' => 360,
                 'type' => 'text',
-                'description' => __( 'This option controls the distance that the sharing buttons will appear to load page. Use only integer numbers.', 'socialfblog' ),
+                'description' => __( 'This option controls the distance that the sharing buttons will appear to load page. Use only integer numbers.', 'social-fblog' ),
                 'section' => 'settings',
                 'menu' => 'socialfblog_settings'
             ),
             'border_radius' => array(
-                'title' => __( 'Add Rounded Edges', 'socialfblog' ),
+                'title' => __( 'Add Rounded Edges', 'social-fblog' ),
                 'default' => null,
                 'type' => 'checkbox',
-                'description' => __( 'Does not work in old browsers.', 'socialfblog' ),
+                'description' => __( 'Does not work in old browsers.', 'social-fblog' ),
                 'section' => 'settings',
                 'menu' => 'socialfblog_settings'
             ),
             'effects' => array(
-                'title' => __( 'Motion Effects', 'socialfblog' ),
+                'title' => __( 'Motion Effects', 'social-fblog' ),
                 'default' => 0,
                 'type' => 'select',
                 'options' => array(
-                    __( 'Elastic', 'socialfblog' ),
-                    __( 'Static', 'socialfblog' )
+                    __( 'Elastic', 'social-fblog' ),
+                    __( 'Static', 'social-fblog' )
                 ),
                 'section' => 'settings',
                 'menu' => 'socialfblog_settings'
             ),
             'opacity' => array(
-                'title' => __( 'Opacity Effects', 'socialfblog' ),
+                'title' => __( 'Opacity Effects', 'social-fblog' ),
                 'default' => 0,
                 'type' => 'select',
-                'description' => __( 'Does not work in versions 6, 7 ​​and 8 of Internet Explorer.', 'socialfblog' ),
+                'description' => __( 'Does not work in versions 6, 7 ​​and 8 of Internet Explorer.', 'social-fblog' ),
                 'options' => array(
-                    __( 'No Effect (default)', 'socialfblog' ),
-                    __( 'Initial Opacity', 'socialfblog' ),
-                    __( 'Continuous Opacity', 'socialfblog' )
+                    __( 'No Effect (default)', 'social-fblog' ),
+                    __( 'Initial Opacity', 'social-fblog' ),
+                    __( 'Continuous Opacity', 'social-fblog' )
                 ),
                 'section' => 'settings',
                 'menu' => 'socialfblog_settings'
             ),
             'opacity_intensity' => array(
-                'title' => __( 'Opacity Intensity', 'socialfblog' ),
+                'title' => __( 'Opacity Intensity', 'social-fblog' ),
                 'default' => '0.7',
                 'type' => 'text',
-                'description' => __( 'Enter values ​​between "0.1" to "1".<br />This option works only if it has been activated the "Opacity Effects" as "Initial Opacity" or "Continuous Opacity"', 'socialfblog' ),
+                'description' => __( 'Enter values ​​between "0.1" to "1".<br />This option works only if it has been activated the "Opacity Effects" as "Initial Opacity" or "Continuous Opacity"', 'social-fblog' ),
                 'section' => 'settings',
                 'menu' => 'socialfblog_settings'
             )
@@ -330,10 +330,10 @@ class Social_FBlog {
      */
     public function menu() {
         add_options_page(
-            __( 'Social FBlog', 'socialfblog' ),
-            __( 'Social FBlog', 'socialfblog' ),
+            __( 'Social FBlog', 'social-fblog' ),
+            __( 'Social FBlog', 'social-fblog' ),
             'manage_options',
-            'socialfblog',
+            'social-fblog',
             array( &$this, 'settings_page' )
         );
     }
@@ -355,7 +355,7 @@ class Social_FBlog {
         <div class="wrap">
             <?php screen_icon( 'options-general' ); ?>
             <h2 class="nav-tab-wrapper">
-                <a href="admin.php?page=socialfblog&amp;tab=buttons" class="nav-tab <?php echo $current_tab == 'buttons' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Buttons', 'socialfblog' ); ?></a><a href="admin.php?page=socialfblog&amp;tab=settings" class="nav-tab <?php echo $current_tab == 'settings' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Settings', 'socialfblog' ); ?></a>
+                <a href="admin.php?page=social-fblog&amp;tab=buttons" class="nav-tab <?php echo $current_tab == 'buttons' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Buttons', 'social-fblog' ); ?></a><a href="admin.php?page=social-fblog&amp;tab=settings" class="nav-tab <?php echo $current_tab == 'settings' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Settings', 'social-fblog' ); ?></a>
             </h2>
 
             <form method="post" action="options.php">
@@ -506,7 +506,7 @@ class Social_FBlog {
 
         $html = sprintf( '<input type="checkbox" id="%1$s" name="%2$s[%1$s]" value="1"%3$s />', $id, $menu, checked( 1, $current, false ) );
 
-        $html .= sprintf( '<label for="%s"> %s</label><br />', $id, __( 'Activate/Deactivate', 'socialfblog' ) );
+        $html .= sprintf( '<label for="%s"> %s</label><br />', $id, __( 'Activate/Deactivate', 'social-fblog' ) );
 
         // Displays option description.
         if ( isset( $args['description'] ) ) {
@@ -668,7 +668,7 @@ class Social_FBlog {
      */
     protected function button_email( $title, $url ) {
         $button = '<div id="socialfblog-email">';
-        $button .= sprintf( '<a href="mailto:?subject=%1$s&amp;body=%1$s:%%20%2$s" title="%3$s">%4$s</a>', rawurlencode( $title ), urlencode( $url ), __( 'Share by Email', 'socialfblog' ), __( 'Email', 'socialfblog' ) );
+        $button .= sprintf( '<a href="mailto:?subject=%1$s&amp;body=%1$s:%%20%2$s" title="%3$s">%4$s</a>', rawurlencode( $title ), urlencode( $url ), __( 'Share by Email', 'social-fblog' ), __( 'Email', 'social-fblog' ) );
         $button .= '</div>';
 
         return $button;
@@ -758,9 +758,9 @@ class Social_FBlog {
 
             $twitter = '<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>' . "\n";
 
-            $google = sprintf( '<script type="text/javascript">window.___gcfg = {lang: "%s"};(function() {var po = document.createElement("script"); po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(po, s);})();</script>', __( 'en-US', 'socialfblog' ) ) . "\n"; // pt-BR
+            $google = sprintf( '<script type="text/javascript">window.___gcfg = {lang: "%s"};(function() {var po = document.createElement("script"); po.type = "text/javascript"; po.async = true;po.src = "https://apis.google.com/js/plusone.js";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(po, s);})();</script>', __( 'en-US', 'social-fblog' ) ) . "\n"; // pt-BR
 
-            $facebook = sprintf( '<div id="fb-root"></div><script type="text/javascript">(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/%s/all.js#xfbml=1&appId=228619377180035";fjs.parentNode.insertBefore(js, fjs);}(document, "script", "facebook-jssdk"));</script>', __( 'en_US', 'socialfblog' ) ) . "\n"; // pt_BR
+            $facebook = sprintf( '<div id="fb-root"></div><script type="text/javascript">(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/%s/all.js#xfbml=1&appId=228619377180035";fjs.parentNode.insertBefore(js, fjs);}(document, "script", "facebook-jssdk"));</script>', __( 'en_US', 'social-fblog' ) ) . "\n"; // pt_BR
 
             $linkedin = '<script type="text/javascript" src="http://platform.linkedin.com/in.js"></script>';
 

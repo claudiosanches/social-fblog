@@ -23,244 +23,244 @@ msgstr ""
 #: social-fblog.php:0
 #: social-fblog.php:333
 #: social-fblog.php:334
-#@ socialfblog
+#@ social-fblog
 msgid "Social FBlog"
 msgstr "Social FBlog"
 
 #. translators: plugin header field 'PluginURI'
 #: social-fblog.php:0
-#@ socialfblog
+#@ social-fblog
 msgid "http://www.ferramentasblog.com/2011/08/plugin-wordpress-box-flutuante-ferramentas-blog.html"
 msgstr "http://www.ferramentasblog.com/2011/08/plugin-wordpress-box-flutuante-ferramentas-blog.html"
 
 #. translators: plugin header field 'Author'
 #: social-fblog.php:0
-#@ socialfblog
+#@ social-fblog
 msgid "claudiosanches"
 msgstr "claudiosanches"
 
 #. translators: plugin header field 'AuthorURI'
 #: social-fblog.php:0
-#@ socialfblog
+#@ social-fblog
 msgid "http://claudiosmweb.com/"
 msgstr "http://claudiosmweb.com/"
 
 #. translators: plugin header field 'Version'
 #: social-fblog.php:0
-#@ socialfblog
+#@ social-fblog
 msgid "3.0"
 msgstr "3.0"
 
 #: social-fblog.php:62
-#@ socialfblog
+#@ social-fblog
 msgid "Twitter"
 msgstr "Twitter"
 
 #: social-fblog.php:67
-#@ socialfblog
+#@ social-fblog
 msgid "Display Twitter button"
 msgstr "Exibir o botão do Twitter"
 
 #: social-fblog.php:74
-#@ socialfblog
+#@ social-fblog
 msgid "Twitter username"
 msgstr "Nome de usuário no Twitter"
 
 #: social-fblog.php:77
-#@ socialfblog
+#@ social-fblog
 msgid "Just insert the username. Example: ferramentasblog"
 msgstr "Insira apenas o seu nome de usuário. Exemplo: ferramentasblog"
 
 #: social-fblog.php:82
-#@ socialfblog
+#@ social-fblog
 msgid "Google Plus"
 msgstr "Google Plus"
 
 #: social-fblog.php:87
-#@ socialfblog
+#@ social-fblog
 msgid "Display Google Plus button"
 msgstr "Exibir o botão do Google Plus"
 
 #: social-fblog.php:94
-#@ socialfblog
+#@ social-fblog
 msgid "Facebook"
 msgstr "Facebook"
 
 #: social-fblog.php:99
-#@ socialfblog
+#@ social-fblog
 msgid "Display Facebook button"
 msgstr "Exibir o botão do Facebook"
 
 #: social-fblog.php:106
-#@ socialfblog
+#@ social-fblog
 msgid "Display Facebook Send button"
 msgstr "Exibir o botão Enviar do Facebook"
 
 #: social-fblog.php:113
-#@ socialfblog
+#@ social-fblog
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
 #: social-fblog.php:118
-#@ socialfblog
+#@ social-fblog
 msgid "Display LinkedIn button"
 msgstr "Exibir o botão do LinkedIn"
 
 #: social-fblog.php:125
-#@ socialfblog
+#@ social-fblog
 msgid "Pinterest"
 msgstr "Pinterest"
 
 #: social-fblog.php:130
-#@ socialfblog
+#@ social-fblog
 msgid "Display Pinterest button"
 msgstr "Exibir o botão do Pinterest"
 
 #: social-fblog.php:137
 #: social-fblog.php:671
-#@ socialfblog
+#@ social-fblog
 msgid "Email"
 msgstr "Email"
 
 #: social-fblog.php:142
-#@ socialfblog
+#@ social-fblog
 msgid "Display Email button"
 msgstr "Exibir botão de Email"
 
 #: social-fblog.php:149
 #: social-fblog.php:358
-#@ socialfblog
+#@ social-fblog
 msgid "Settings"
 msgstr "Configurações"
 
 #: social-fblog.php:154
-#@ socialfblog
+#@ social-fblog
 msgid "Display Buttons in"
 msgstr "Exibir botões em"
 
 #: social-fblog.php:158
-#@ socialfblog
+#@ social-fblog
 msgid "Posts and Pages"
 msgstr "Posts e Páginas"
 
 #: social-fblog.php:159
-#@ socialfblog
+#@ social-fblog
 msgid "Only in Posts"
 msgstr "Apenas em Posts"
 
 #: social-fblog.php:160
-#@ socialfblog
+#@ social-fblog
 msgid "Only in Pages"
 msgstr "Apenas em Páginas"
 
 #: social-fblog.php:166
-#@ socialfblog
+#@ social-fblog
 msgid "Horizontal Alignment"
 msgstr "Alinhamento horizontal"
 
 #: social-fblog.php:169
-#@ socialfblog
+#@ social-fblog
 msgid "This option is used to control the distance of the sharing buttons on the content. Use only integer numbers."
 msgstr "Esta opção é utilizada para controlar a distância entre os botões e o conteúdo. Use apenas números inteiros."
 
 #: social-fblog.php:174
-#@ socialfblog
+#@ social-fblog
 msgid "Initial Distance"
 msgstr "Distância inicial"
 
 #: social-fblog.php:177
-#@ socialfblog
+#@ social-fblog
 msgid "This option controls the distance that the sharing buttons will appear to load page. Use only integer numbers."
 msgstr "Esta opção controla a distância que os botões ficarão em relação ao título ao carregar a página. Use apenas números inteiros."
 
 #: social-fblog.php:182
-#@ socialfblog
+#@ social-fblog
 msgid "Add Rounded Edges"
 msgstr "Adicionar bordar redondas"
 
 #: social-fblog.php:185
-#@ socialfblog
+#@ social-fblog
 msgid "Does not work in old browsers."
 msgstr "Não funciona em navegadores antigos."
 
 #: social-fblog.php:190
-#@ socialfblog
+#@ social-fblog
 msgid "Motion Effects"
 msgstr "Efeitos de movimento"
 
 #: social-fblog.php:194
-#@ socialfblog
+#@ social-fblog
 msgid "Elastic"
 msgstr "Elástico"
 
 #: social-fblog.php:195
-#@ socialfblog
+#@ social-fblog
 msgid "Static"
 msgstr "Estático"
 
 #: social-fblog.php:201
-#@ socialfblog
+#@ social-fblog
 msgid "Opacity Effects"
 msgstr "Efeitos de opacidade"
 
 #: social-fblog.php:204
-#@ socialfblog
+#@ social-fblog
 msgid "Does not work in versions 6, 7 ​​and 8 of Internet Explorer."
 msgstr "Não funciona nas versões 6, 7 e 8 do Internet Explorer."
 
 #: social-fblog.php:206
-#@ socialfblog
+#@ social-fblog
 msgid "No Effect (default)"
 msgstr "Sem efeito (padrão)"
 
 #: social-fblog.php:207
-#@ socialfblog
+#@ social-fblog
 msgid "Initial Opacity"
 msgstr "Opacidade no início"
 
 #: social-fblog.php:208
-#@ socialfblog
+#@ social-fblog
 msgid "Continuous Opacity"
 msgstr "Opacidade contínua"
 
 #: social-fblog.php:214
-#@ socialfblog
+#@ social-fblog
 msgid "Opacity Intensity"
 msgstr "Intensidade da opacidade"
 
 #: social-fblog.php:217
-#@ socialfblog
+#@ social-fblog
 msgid "Enter values ​​between \"0.1\" to \"1\".<br />This option works only if it has been activated the \"Opacity Effects\" as \"Initial Opacity\" or \"Continuous Opacity\""
 msgstr "Digite valores entre \"0.1\" até \"1\".<br />Esta opção funciona apenas quando estiver ativada a opção de \"Efeitos de opacidade\" como \"Opacidade no início\" ou \"Opacidade contínua\""
 
 #: social-fblog.php:358
-#@ socialfblog
+#@ social-fblog
 msgid "Buttons"
 msgstr "Botões"
 
 #: social-fblog.php:509
-#@ socialfblog
+#@ social-fblog
 msgid "Activate/Deactivate"
 msgstr "Ativar/Desativar"
 
 #: social-fblog.php:671
-#@ socialfblog
+#@ social-fblog
 msgid "Share by Email"
 msgstr "Compartilhar por e-mail"
 
 #: social-fblog.php:761
-#@ socialfblog
+#@ social-fblog
 msgid "en-US"
 msgstr "pt-BR"
 
 #: social-fblog.php:763
-#@ socialfblog
+#@ social-fblog
 msgid "en_US"
 msgstr "pt_BR"
 
 #. translators: plugin header field 'Description'
 #: social-fblog.php:0
-#@ socialfblog
+#@ social-fblog
 msgid "Inserts a floating box next to your blog posts to share your content on Twitter, Facebook and Google Plus and others."
 msgstr "Insere uma caixa flutuante ao lado de seus posts para compartilhar seu conteúdo no Twitter, Facebook e Plus Google e outros."
 
