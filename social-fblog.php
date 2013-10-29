@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Social FBlog
- * Plugin URI: http://www.ferramentasblog.com/2011/08/plugin-wordpress-box-flutuante-ferramentas-blog.html
+ * Plugin URI: https://github.com/claudiosmweb/social-fblog
  * Description: Inserts a floating box next to your blog posts to share your content on Twitter, Facebook and Google Plus and others.
  * Author: claudiosanches
  * Author URI: http://claudiosmweb.com/
