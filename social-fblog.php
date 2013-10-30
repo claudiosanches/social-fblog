@@ -832,10 +832,12 @@ class Social_FBlog {
 
             switch ( $settings['display_in'] ) {
                 case '1':
-                    if ( is_single() ) return $content . $html;
+                    if ( is_single() )
+                        return $content . $html;
                     break;
                 case '2':
-                    if ( is_page() ) return $content . $html;
+                    if ( is_page() )
+                        return $content . $html;
                     break;
 
                 default:
