@@ -662,6 +662,7 @@ class Social_FBlog {
 
             wp_enqueue_script( 'jquery' );
             wp_enqueue_style( 'social-fblog', plugins_url( 'assets/css/social-fblog.css', __FILE__ ), array(), null );
+            wp_enqueue_script( 'social-fblog', plugins_url( 'assets/js/social-fblog.min.js', __FILE__ ), array( 'jquery' ), null, true );
         }
     }
 

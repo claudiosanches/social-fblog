@@ -47,7 +47,7 @@ module.exports = function(grunt) {
             },
             all: [
                 "Gruntfile.js",
-                "<%= dirs.js %>/jquery.social-fblog.js"
+                "<%= dirs.js %>/social-fblog.js"
             ]
         },
 
@@ -55,7 +55,7 @@ module.exports = function(grunt) {
         uglify: {
             dist: {
                 files: {
-                    "<%= dirs.js %>/jquery.social-fblog.min.js": ["<%= dirs.js %>/jquery.social-fblog.js"]
+                    "<%= dirs.js %>/social-fblog.min.js": ["<%= dirs.js %>/social-fblog.js"]
                 }
             }
         },
