@@ -663,6 +663,16 @@ class Social_FBlog {
             wp_enqueue_script( 'jquery' );
             wp_enqueue_style( 'social-fblog', plugins_url( 'assets/css/social-fblog.css', __FILE__ ), array(), null );
             wp_enqueue_script( 'social-fblog', plugins_url( 'assets/js/social-fblog.min.js', __FILE__ ), array( 'jquery' ), null, true );
+            wp_localize_script(
+                'social-fblog',
+                'social_fblog_params',
+                array(
+                    'effect'            => $settings['effects'],
+                    'opacity'           => $settings['opacity'],
+                    'top_distance'      => $settings['top_distance'],
+                    'opacity_intensity' => $settings['opacity_intensity']
+                )
+            );
         }
     }
 
@@ -738,6 +748,7 @@ class Social_FBlog {
         if ( is_single() || is_page() ) {
             $settings = get_option( 'socialfblog_settings' );
             $buttons = get_option( 'socialfblog_buttons' );
+            $scripts = '';
 
             $twitter = '<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>' . "\n";
 
@@ -748,12 +759,6 @@ class Social_FBlog {
             $linkedin = '<script type="text/javascript" src="http://platform.linkedin.com/in.js"></script>';
 
             $pinterest = '<script type="text/javascript" src="http://assets.pinterest.com/js/pinit.js"></script>';
-
-            $top = $settings['top_distance'];
-            $opacity = ( 0 != $settings['opacity'] ) ? true : false;
-            $intensity = $settings['opacity_intensity'];
-
-            $scripts = ( 0 == $settings['effects'] ) ? $this->effect_elastic( $opacity, $intensity ) : $this->effect_static( $top, $opacity, $intensity );
 
             $scripts .= isset( $buttons['twitter_active'] ) ? $twitter : '';
             $scripts .= isset( $buttons['google_active'] ) ? $google : '';
