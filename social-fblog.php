@@ -677,71 +677,6 @@ class Social_FBlog {
     }
 
     /**
-     * Elastic Effect.
-     *
-     * @param  boolean $opacity   Add opacity.
-     * @param  string  $intensity Control opacity intensity.
-     *
-     * @return string             jQuery with the effect.
-     */
-    protected function effect_elastic( $opacity = false, $intensity = '0.7' ) {
-
-        $opacity_motion = ( true == $opacity ) ? '.css({opacity:"1"})' : '';
-        $opacity_initial = ( true == $opacity ) ? '.css({opacity:"' . $intensity . '"})' : '';
-
-        $script = '<script type="text/javascript">';
-            $script .= 'jQuery(document).ready(function($){';
-                $script .= 'var socialbox = $("#socialfblog-box");';
-                $script .= 'var offset = socialbox.offset();';
-                $script .= '$(window).scroll(function(){';
-                    $script .= 'if ($(window).scrollTop() > offset.top) {';
-                        $script .= 'socialbox.stop()' . $opacity_motion . '.animate({';
-                            $script .= 'marginTop:$(window).scrollTop() - offset.top + 60';
-                        $script .= '});';
-                    $script .= '} else {';
-                        $script .= 'socialbox.stop()' . $opacity_initial . '.animate({';
-                            $script .= 'marginTop:0';
-                        $script .= '});';
-                    $script .= '}';
-                $script .= '});';
-            $script .= '});';
-        $script .= '</script>' . "\n";
-
-        return $script;
-    }
-
-    /**
-     * Static Effect.
-     *
-     * @param  int     $top       Distance from the page top.
-     * @param  boolean $opacity   Add opacity.
-     * @param  string  $intensity Control opacity intensity.
-     *
-     * @return string             jQuery with the effect.
-     */
-    protected function effect_static( $top, $opacity = false, $intensity = '0.7' ) {
-
-        $opacity_motion = ( true == $opacity ) ? 'opacity:"1",' : '';
-        $opacity_initial = ( true == $opacity ) ? 'opacity:"' . $intensity . '",' : '';
-
-        $script = '<script type="text/javascript">';
-            $script .= 'jQuery(document).ready(function($){';
-                $script .= 'var socialbox = $("#socialfblog-box");';
-                $script .= 'var offset = socialbox.offset();';
-                $script .= '$(window).scroll(function(){';
-                    $script .= 'if ($(window).scrollTop() > offset.top){';
-                        $script .= 'socialbox.stop().css({' . $opacity_motion . 'position:"fixed",top:60});';
-                    $script .= '} else {';
-                        $script .= 'socialbox.stop().css({' . $opacity_initial . 'position:"absolute",top:"' . $top . 'px"});';
-                    $script .= '}';
-                $script .= '});';
-            $script .= '});';
-        $script .= '</script>' . "\n";
-
-        return $script;
-    }
-
-    /**
      * Display jQuery validate options in footer.
      */
     public function footer_js() {
@@ -816,18 +751,7 @@ class Social_FBlog {
 
             // Styles.
             $border_radius = isset( $settings['border_radius'] ) ? 'rounded' : '';
-            switch ( $settings['opacity'] ) {
-                case 1:
-                    $opacity = ' opacity:' . $settings['opacity_intensity'] . ';';
-                    break;
-                case 2:
-                    $opacity = ' opacity:' . $settings['opacity_intensity'] . ' !important;';
-                    break;
-
-                default:
-                    $opacity = '';
-                    break;
-            }
+            $opacity = ( 0 != $settings['opacity'] ) ? ' opacity: ' . $settings['opacity_intensity'] . ';' : '';
 
             // Plugin HTML.
             $html = '<div id="socialfblog">';
