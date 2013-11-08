@@ -32,7 +32,7 @@ module.exports = function(grunt) {
                 ".sass-cache/",
                 "node_modules/",
                 "assets/sass/",
-                "assets/js/jquery.social-fblog.js",
+                "assets/js/social-fblog.js",
                 "Gruntfile.js",
                 "README.md",
                 "package.json",
