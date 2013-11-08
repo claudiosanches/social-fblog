@@ -2,9 +2,9 @@
 Contributors: claudiosanches
 Donate link: http://claudiosmweb.com/doacoes/
 Tags: share, jquery, facebook, twitter, google plus, linkedin, pinterest, email
-Requires at least: 3.3
-Tested up to: 3.5
-Stable tag: 3.0
+Requires at least: 3.5
+Tested up to: 3.7.1
+Stable tag: 3.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -144,7 +144,13 @@ O código deve ser adicionado no `functions.php` do seu tema.
 
 == Changelog ==
 
-= 3.0 03/01/2013 =
+= 3.1.0 - 08/11/2013 =
+
+* Refactored all code.
+* Improved the JavaScripts.
+* Improved the styles.
+
+= 3.0 - 03/01/2013 =
 
 * Source code reformulation.
 * Added LinkedIn button.
@@ -155,15 +161,18 @@ O código deve ser adicionado no `functions.php` do seu tema.
 * Improved performance with fewer options in the database.
 * Added Brazilian Portuguese and English languages.
 
-= 0.1 =
+= 3.1.0 =
 
-* Initial release.
+* Refactored all code.
+* Improved the JavaScripts.
+* Improved the styles.
 
 == License ==
 
-This file is part of Social FBlog.
 Social FBlog is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published
 by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
 Social FBlog is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
 You should have received a copy of the GNU General Public License along with Author Bio Box. If not, see <http://www.gnu.org/licenses/>.
