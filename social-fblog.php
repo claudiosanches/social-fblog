@@ -12,7 +12,7 @@
  * Plugin Name: Social FBlog
  * Plugin URI: https://github.com/claudiosmweb/social-fblog
  * Description: Inserts a floating box next to your blog posts to share your content on Twitter, Facebook and Google Plus and others.
- * Version: 3.1.0
+ * Version: 3.2.0
  * Author: claudiosanches
  * Author URI: http://claudiosmweb.com/
  * Text Domain: social-fblog
