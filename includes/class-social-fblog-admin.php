@@ -195,7 +195,6 @@ class Social_FBlog_Admin {
         ?>
 
         <div class="wrap">
-            <?php screen_icon( 'options-general' ); ?>
             <h2 class="nav-tab-wrapper">
                 <a href="admin.php?page=<?php echo $this->plugin_slug; ?>&amp;tab=buttons" class="nav-tab <?php echo $current_tab == 'buttons' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Buttons', $this->plugin_slug ); ?></a><a href="admin.php?page=<?php echo $this->plugin_slug; ?>&amp;tab=settings" class="nav-tab <?php echo $current_tab == 'settings' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Settings', $this->plugin_slug ); ?></a>
             </h2>
