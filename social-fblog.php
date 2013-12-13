@@ -41,6 +41,6 @@ add_action( 'plugins_loaded', array( 'Social_FBlog', 'get_instance' ) );
  * Plugin admin.
  */
 if ( is_admin() && ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) ) {
-    require_once plugin_dir_path( __FILE__ ) . '/includes/class-social-fblog-admin.php';
-    add_action( 'plugins_loaded', array( 'Social_FBlog_Admin', 'get_instance' ) );
+	require_once plugin_dir_path( __FILE__ ) . '/includes/class-social-fblog-admin.php';
+	add_action( 'plugins_loaded', array( 'Social_FBlog_Admin', 'get_instance' ) );
 }

@@ -1,73 +1,73 @@
 #socialfblog {
-    width: 60px;
+	width: 60px;
 }
 
 #socialfblog-box {
-    background: #fff;
-    border: 1px solid #ccc;
-    display: block;
-    float: left;
-    margin: 0;
-    padding: 12px 5px 5px;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    z-index: 9999;
+	background: #fff;
+	border: 1px solid #ccc;
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 12px 5px 5px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	z-index: 9999;
 
-    iframe {
-        margin: 0;
-        padding: 0;
-    }
+	iframe {
+		margin: 0;
+		padding: 0;
+	}
 
-    div {
-       margin: 0 0 5px;
-    }
+	div {
+	   margin: 0 0 5px;
+	}
 
-    &:hover {
-        opacity: 1 !important;
-    }
+	&:hover {
+		opacity: 1 !important;
+	}
 
-    &.rounded {
-        -moz-border-radius: 8px;
-        -webkit-border-radius: 8px;
-        border-radius: 8px;
-    }
+	&.rounded {
+		-moz-border-radius: 8px;
+		-webkit-border-radius: 8px;
+		border-radius: 8px;
+	}
 }
 
 #socialfblog-twitter {
 
-    iframe {
-        height: 63px !important;
-    }
+	iframe {
+		height: 63px !important;
+	}
 
-    .twitter-count-vertical {
-        width: 56px !important;
-    }
+	.twitter-count-vertical {
+		width: 56px !important;
+	}
 }
 
 #socialfblog-facebook {
-    & > div {
-        margin: 1px 0 0 !important;
-    }
+	& > div {
+		margin: 1px 0 0 !important;
+	}
 
-    .fb_iframe_widget iframe {
-       position: relative !important;
-    }
+	.fb_iframe_widget iframe {
+	   position: relative !important;
+	}
 }
 
 #socialfblog-email {
-    a {
-        border: 1px solid #ccc;
-        color: #777;
-        display: block;
-        text-decoration: none;
+	a {
+		border: 1px solid #ccc;
+		color: #777;
+		display: block;
+		text-decoration: none;
 
-        a:hover {
-           background:#eee
-        }
-    }
+		a:hover {
+		   background:#eee
+		}
+	}
 }
 
 #fb-root {
-    display: none;
+	display: none;
 }

@@ -2,9 +2,9 @@
 **Contributors:** claudiosanches  
 **Donate link:** http://claudiosmweb.com/doacoes/  
 **Tags:** share, jquery, facebook, twitter, google plus, linkedin, pinterest, email  
-**Requires at least:** 3.5  
-**Tested up to:** 3.7.1  
-**Stable tag:** 3.1.0  
+**Requires at least:** 3.8  
+**Tested up to:** 3.8  
+**Stable tag:** 3.2.0  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -58,29 +58,29 @@ Use the filters for this:
 
 **Example of use with the [Buffer](http://bufferapp.com) button:**
 
-    function socialfblog_add_buffer_html( $html ) {
+	function socialfblog_add_buffer_html( $html ) {
 
-        // Gets post data.
-        global $post;
+		// Gets post data.
+		global $post;
 
-        // Adds the new button.
-        $html .= sprintf( '<a href="http://bufferapp.com/add" class="buffer-add-button" data-text="%s" data-url="%s" data-count="vertical" data-via="ferramentasblog">Buffer</a>', $post->post_title, get_permalink( $post->ID ) );
+		// Adds the new button.
+		$html .= sprintf( '<a href="http://bufferapp.com/add" class="buffer-add-button" data-text="%s" data-url="%s" data-count="vertical" data-via="ferramentasblog">Buffer</a>', $post->post_title, get_permalink( $post->ID ) );
 
-        return $html;
+		return $html;
 
-    }
+	}
 
-    add_filter( 'socialfblog_buttons', 'socialfblog_add_buffer_html' );
+	add_filter( 'socialfblog_buttons', 'socialfblog_add_buffer_html' );
 
-    function socialfblog_add_buffer_scripts( $scripts ) {
+	function socialfblog_add_buffer_scripts( $scripts ) {
 
-        // Adds the new scripts.
-        $scripts .= '<script type="text/javascript" src="http://static.bufferapp.com/js/button.js"></script>';
+		// Adds the new scripts.
+		$scripts .= '<script type="text/javascript" src="http://static.bufferapp.com/js/button.js"></script>';
 
-        return $scripts;
-    }
+		return $scripts;
+	}
 
-    add_filter( 'socialfblog_scripts', 'socialfblog_add_buffer_scripts' );
+	add_filter( 'socialfblog_scripts', 'socialfblog_add_buffer_scripts' );
 
 The code should be added to the `functions.php` of your theme.
 
@@ -110,29 +110,29 @@ Para isso utilize os filtros:
 
 **Exemplo de uso com o botão do [Buffer](http://bufferapp.com):**
 
-    function socialfblog_add_buffer_html( $html ) {
+	function socialfblog_add_buffer_html( $html ) {
 
-        // Pega as informações do post.
-        global $post;
+		// Pega as informações do post.
+		global $post;
 
-        // Adiciona o novo botão.
-        $html .= sprintf( '<a href="http://bufferapp.com/add" class="buffer-add-button" data-text="%s" data-url="%s" data-count="vertical" data-via="ferramentasblog">Buffer</a>', $post->post_title, get_permalink( $post->ID ) );
+		// Adiciona o novo botão.
+		$html .= sprintf( '<a href="http://bufferapp.com/add" class="buffer-add-button" data-text="%s" data-url="%s" data-count="vertical" data-via="ferramentasblog">Buffer</a>', $post->post_title, get_permalink( $post->ID ) );
 
-        return $html;
+		return $html;
 
-    }
+	}
 
-    add_filter( 'socialfblog_buttons', 'socialfblog_add_buffer_html' );
+	add_filter( 'socialfblog_buttons', 'socialfblog_add_buffer_html' );
 
-    function socialfblog_add_buffer_scripts( $scripts ) {
+	function socialfblog_add_buffer_scripts( $scripts ) {
 
-        // Adiciona o novo javascript.
-        $scripts .= '<script type="text/javascript" src="http://static.bufferapp.com/js/button.js"></script>';
+		// Adiciona o novo javascript.
+		$scripts .= '<script type="text/javascript" src="http://static.bufferapp.com/js/button.js"></script>';
 
-        return $scripts;
-    }
+		return $scripts;
+	}
 
-    add_filter( 'socialfblog_scripts', 'socialfblog_add_buffer_scripts' );
+	add_filter( 'socialfblog_scripts', 'socialfblog_add_buffer_scripts' );
 
 O código deve ser adicionado no `functions.php` do seu tema.
 
@@ -150,13 +150,18 @@ O código deve ser adicionado no `functions.php` do seu tema.
 
 ## Changelog ##
 
+### 3.2.0 - 13/12/2013 ###
+
+* Fixed standards.
+* Improved support do WordPress 3.8.
+
 ### 3.1.0 - 08/11/2013 ###
 
 * Refactored all code.
 * Improved the JavaScripts.
 * Improved the styles.
 
-### 3.0 - 03/01/2013 ###
+### 3.0.0 - 03/01/2013 ###
 
 * Source code reformulation.
 * Added LinkedIn button.
