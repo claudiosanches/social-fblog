@@ -3,7 +3,7 @@
 **Donate link:** http://claudiosmweb.com/doacoes/  
 **Tags:** share, jquery, facebook, twitter, google plus, linkedin, pinterest, email  
 **Requires at least:** 3.8  
-**Tested up to:** 3.8  
+**Tested up to:** 3.9  
 **Stable tag:** 3.2.0  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
@@ -171,12 +171,6 @@ O código deve ser adicionado no `functions.php` do seu tema.
 * Added filters to add new buttons for sharing.
 * Improved performance with fewer options in the database.
 * Added Brazilian Portuguese and English languages.
-
-### 3.1.0 ###
-
-* Refactored all code.
-* Improved the JavaScripts.
-* Improved the styles.
 
 ## License ##
 
