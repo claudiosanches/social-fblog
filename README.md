@@ -3,7 +3,7 @@
 **Donate link:** http://claudiosmweb.com/doacoes/  
 **Tags:** share, jquery, facebook, twitter, google plus, linkedin, pinterest, email  
 **Requires at least:** 3.8  
-**Tested up to:** 3.9  
+**Tested up to:** 4.0  
 **Stable tag:** 3.2.0  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
@@ -139,13 +139,13 @@ O código deve ser adicionado no `functions.php` do seu tema.
 ## Screenshots ##
 
 ### 1. Plugin buttons options. ###
-![1. Plugin buttons options.](http://s.wordpress.org/extend/plugins/social-fblog/screenshot-1.png)
+![1. Plugin buttons options.](http://ps.w.org/social-fblog/assets/screenshot-1.png)
 
 ### 2. Plugin settings. ###
-![2. Plugin settings.](http://s.wordpress.org/extend/plugins/social-fblog/screenshot-2.png)
+![2. Plugin settings.](http://ps.w.org/social-fblog/assets/screenshot-2.png)
 
 ### 3. Plugin in action. ###
-![3. Plugin in action.](http://s.wordpress.org/extend/plugins/social-fblog/screenshot-3.png)
+![3. Plugin in action.](http://ps.w.org/social-fblog/assets/screenshot-3.png)
 
 
 ## Changelog ##
